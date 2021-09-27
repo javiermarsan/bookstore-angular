@@ -1,0 +1,42 @@
+<div class="header-options">
+    <div class="container">
+        <div class="row">
+            <!--Breadcrumb-->
+            <div class="col-md-7 col-sm-7 col-xs-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Author management</li>
+                  </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+ </div>
+ <div class="back-gray section-inside section-admin">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4">
+                <h1 class="mb-0">Author management</h1>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <button class='btn btn-success btn-icon float-right' (click)="edit(null)">
+                    <span class="material-icons">add</span>
+                    <span>Add</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <jm-table-query 
+                    [data]="data" 
+                    [cols]="cols" 
+                    (onEdit)="edit($event)" 
+                    (onDelete)="delete($event)">
+                </jm-table-query>
+            </div>
+        </div>
+    </div>
+</div>
+  	
+

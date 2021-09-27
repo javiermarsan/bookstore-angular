@@ -1,0 +1,18 @@
+<div class='form-group'>
+  <select 
+    [(ngModel)]="value"
+    [id]="identifier"
+    class='form-control'
+    [disabled]="disabled"
+    (change)="controlChange($event)"
+  >
+    <option value=""></option>
+    <ng-content></ng-content>
+    <option [value]="obj[optionsValue]" *ngFor="let obj of options">{{ obj[optionsText] }}</option>
+  </select>
+
+  <jm-form-validation
+    *ngIf="(invalid | async) && (controlTouched || formTouched)"
+    [messages]="failures | async">
+  </jm-form-validation>
+</div>

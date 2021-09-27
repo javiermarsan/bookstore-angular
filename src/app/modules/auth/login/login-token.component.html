@@ -1,0 +1,45 @@
+<div class="full-screen back-gray">
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-12 col-md-7 col-lg-6 col-xl-7 d-none d-lg-block">
+        <div class="vh-100 ml-n3 login-image"></div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6 col-xl-5">
+        <div class="login-signup-wrap px-4 px-lg-5 my-5">
+          <div class="login-logo text-center">
+            <a routerLink="">
+              Home
+            </a>
+          </div>
+          <!--login form-->
+          <jm-list-errors [errors]="errors"></jm-list-errors>
+          <form [formGroup]="authForm" (ngSubmit)="submitFormToken()" class="login-signup-form">
+            <fieldset [disabled]="isSubmitting">
+              <div class="form-group">
+                <label class="pb-1">Email</label>
+                <div class="input-group input-group-merge">
+                  <input formControlName="email" name="email" class="form-control" type="text" />
+                </div>
+              </div>
+              <div class="form-group mt-2">
+                <div class="row">
+                  <div class="col">
+                    <label class="pb-1">Password</label>
+                  </div>
+                </div>
+                <div class="input-group input-group-merge">
+                  <input formControlName="password" name="password" class="form-control" type="password" />
+                </div>
+              </div>
+
+              <button type='submit' class='btn btn-primary btn-block solid-btn border-radius mt-4 mb-3' [disabled]="!authForm.valid"><span> Login</span></button>
+
+            </fieldset>
+          </form>
+          <!--login form-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

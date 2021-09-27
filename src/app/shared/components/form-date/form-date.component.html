@@ -1,0 +1,18 @@
+<p-calendar 
+  [(ngModel)]="value" 
+  [id]="identifier"
+  (onSelect)="controlChange($event)"
+  [minDate]="minDate"
+  
+  [inline]="inline"
+  [disabled]="disabled"
+  [disabledDays]="disabledDays"
+  [disabledDates]="disabledDates"
+  
+  [timeOnly]="timeOnly">
+</p-calendar>
+
+<jm-form-validation
+  *ngIf="(invalid | async) && (controlTouched || formTouched)"
+  [messages]="failures | async">
+</jm-form-validation>

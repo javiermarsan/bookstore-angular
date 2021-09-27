@@ -1,0 +1,8 @@
+{
+  "env": {
+    "name": "prod"
+  },
+  "webApi": {
+    "url": "api"
+  }
+}

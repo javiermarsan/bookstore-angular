@@ -1,0 +1,17 @@
+<div class='form-group'>
+  <input
+    type="text"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    [id]="identifier"
+    class='form-control'
+    [disabled]="disabled"
+    (input)="controlInput($event)"
+    (change)="controlChange($event)"
+  />
+
+  <jm-form-validation
+    *ngIf="(invalid | async) && (controlTouched || formTouched)"
+    [messages]="failures | async">
+  </jm-form-validation>
+</div>

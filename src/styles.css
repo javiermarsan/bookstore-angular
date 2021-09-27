@@ -1,0 +1,12 @@
+@import "~font-awesome/css/font-awesome.css";
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+@import "~primeng/resources/themes/saga-blue/theme.css";
+@import "~primeng/resources/primeng.min.css";
+@import "~primeicons/primeicons.css";
+
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.snow.css";
+
+@import "assets/css/site.css";

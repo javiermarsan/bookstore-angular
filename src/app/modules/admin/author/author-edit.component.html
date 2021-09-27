@@ -1,0 +1,19 @@
+<div class='modal-body' id='modal-body'>
+  <jm-list-errors [errors]="errors" [labels]="labels"></jm-list-errors>
+  <form #fm="ngForm">
+    <div class='row'>
+      <label class='col-md-3 control-label'>{{ labels.name }}</label>
+      <jm-form-input class='col-md-9' name="name" [(ngModel)]="data.name" required></jm-form-input>
+    </div>
+  </form>
+</div>
+<div class='modal-footer'>
+  <button name='btnCancel' class='btn btn-default btn-icon' type='button' (click)="cancel()">
+    <span>Cancel</span>
+    <i class="material-icons">clear</i>
+  </button>
+  <button name='btnOk' class='btn btn-success btn-icon' type='button' (click)="submitForm(fm)" [disabled]="isSubmitting">
+    <span>Save</span>
+    <i class="material-icons">save</i>
+  </button>
+</div>

@@ -1,0 +1,5 @@
+<div *ngIf="errorList" style="padding-top: 5px; padding-bottom: 10px;">
+  <div *ngFor="let error of errorList" style="padding-bottom: 2px;">
+    <p-message severity="error" text="{{ error }}"></p-message>
+  </div>
+</div>
